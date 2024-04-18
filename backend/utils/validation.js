@@ -10,9 +10,9 @@ const validateEmail = (email) => {
 
 const validateObjectId = (string) => {
   return mongoose.Types.ObjectId.isValid(string);
-}
+};
 
 module.exports = {
   validateEmail,
   validateObjectId,
-}
+};

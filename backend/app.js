@@ -11,6 +11,9 @@ const profileRoutes = require("./routes/profileRoutes");
 app.use(express.json());
 app.use(cors());
 
+// Set the strictQuery option to false to suppress the deprecation warning
+mongoose.set("strictQuery", false);
+
 const mongoUrl = process.env.MONGODB_URL;
 mongoose.connect(mongoUrl, (err) => {
   if (err) throw err;
